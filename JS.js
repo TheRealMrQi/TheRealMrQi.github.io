@@ -23,6 +23,7 @@ function ResizeElements()
 		var h = screen.height * ratio;
 		logo.style.left =  0+ document.body.clientWidth / 2 - logo.offsetWidth / 2 + 'px';
 		apeLogo.style.left =  0+ document.body.clientWidth / 2 - apeLogo.offsetWidth / 2 + 'px';
+		document.body.style.backgroundSize = 150 + '%';
 	}else
 	{
 		let value = window.scrollY;
