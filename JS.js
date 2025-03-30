@@ -19,7 +19,7 @@ function ResizeElements()
 	var h = screen.height * ratio;
 	logo.style.left =  0+ document.body.clientWidth / 2 - logo.offsetWidth / 2 + 'px';
 	apeLogo.style.left =  0+ document.body.clientWidth / 2 - apeLogo.offsetWidth / 2 + 'px';
-	testElement.innerHTML = detectMob();
+	/*testElement.innerHTML = detectMob();*/
 }
 
 function detectMob() {
