@@ -12,16 +12,28 @@ window.addEventListener('load', ResizeElements);
 
 function ResizeElements()
 {
-	let value = window.scrollY;
-	balloon.style.top = value * 0.35+ 2400  + 'px';
-	var ratio = window.devicePixelRatio || 1;
-	var w = screen.width * ratio;
-	var h = screen.height * ratio;
-	logo.style.left =  0+ document.body.clientWidth / 2 - logo.offsetWidth / 2 + 'px';
-	apeLogo.style.left =  0+ document.body.clientWidth / 2 - apeLogo.offsetWidth / 2 + 'px';
-	
-	/*testElement.innerHTML = detectMob();*/
-	testElement.innerHTML = '';
+	if(detectMob())
+	{
+		logo.style.width = 90 + '%';
+		apeLogo.style.width = 80 + '%';
+		let value = window.scrollY;
+		balloon.style.top = value * 0.35+ 2400  + 'px';
+		var ratio = window.devicePixelRatio || 1;
+		var w = screen.width * ratio;
+		var h = screen.height * ratio;
+		logo.style.left =  0+ document.body.clientWidth / 2 - logo.offsetWidth / 2 + 'px';
+		apeLogo.style.left =  0+ document.body.clientWidth / 2 - apeLogo.offsetWidth / 2 + 'px';
+	}else
+	{
+		let value = window.scrollY;
+		balloon.style.top = value * 0.35+ 2400  + 'px';
+		var ratio = window.devicePixelRatio || 1;
+		var w = screen.width * ratio;
+		var h = screen.height * ratio;
+		logo.style.left =  0+ document.body.clientWidth / 2 - logo.offsetWidth / 2 + 'px';
+		apeLogo.style.left =  0+ document.body.clientWidth / 2 - apeLogo.offsetWidth / 2 + 'px';
+		
+	}
 }
 
 function detectMob() {
@@ -39,3 +51,4 @@ function detectMob() {
         return navigator.userAgent.match(toMatchItem);
     });
 }
+
