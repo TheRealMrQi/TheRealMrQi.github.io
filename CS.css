@@ -1,13 +1,5 @@
 body{
-	background-color: #68D5FF;
-	background-repeat: repeat-x;
-	background-image: url("nightSceneMaru.png");
-	background-size: 75%;
-	image-rendering: pixelated;
-
-	min-width:500px;        
-	width: auto !important;  
-	width:500px;            
+	background-color: #0000;       
 
 }
 
