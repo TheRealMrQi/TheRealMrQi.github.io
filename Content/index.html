@@ -1,9 +1,116 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Simple Layout with Pexels Images</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  body { margin: 0; font-family: 'Montserrat', sans-serif; display: flex; flex-direction: column; min-height: 100vh; background-color: #222; color: #eee; }
+  header { background: #333; padding: 10px; display: flex; justify-content: center; align-items: center; gap: 0; font-family: 'Montserrat', sans-serif; }
+  header a { text-decoration: none; color: #eee; font-weight: bold; padding: 0 15px; }
+  header a:not(:last-child) { border-right: 1px solid #ffffff00; }
+  main { flex: 1; display: flex; min-width: 0; }
+  nav { background: #2b2b2b; width: 200px; min-width: 200px; max-width: 200px; padding: 10px; box-sizing: border-box; flex-shrink: 0; font-family: 'Montserrat', sans-serif; }
+  nav ul { padding-left: 0; margin: 0; }
+  nav li { list-style: none; padding-left: 0; font-size: 14px; }
+  nav li a { color: #eee; text-decoration: none; }
+  nav li a:hover, nav summary a:hover { color: FireBrick; }
+  nav details { margin-bottom: 5px; }
+  nav summary { font-size: 16px; cursor: pointer; display: list-item; color: #eee; position: relative; font-family: 'Montserrat', sans-serif; }
+  nav summary::marker { color: FireBrick; }
+  nav summary a { text-decoration: none; color: #eee; display: inline; }
+  nav details:first-child summary { font-size: 18px; }
+  .home-text { font-weight: bold; }
+  section { flex: 1; padding: 5px; display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 5px; align-content: start; font-family: 'Montserrat', sans-serif; color: #ccc; }
+  .image-container { background: #444; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 5px; }
+  .image-container img { width: 100%; aspect-ratio: 1 / 1; object-fit: contain; cursor: pointer; }
+  .image-container a { display: flex; flex-direction: column; width: 100%; text-decoration: none; color: inherit; }
+  .image-name { margin-top: 3px; font-size: 14px; text-align: center; color: #eee; font-family: 'Montserrat', sans-serif; font-weight: none; }
+  .main-top-text { grid-column: 1 / -1; font-size: 20px; margin-bottom: 5px; font-family: 'Montserrat', sans-serif; color: #ccc; }
+  footer { background: #333; padding: 10px; text-align: center; color: #aaa; font-size: 14px; font-family: 'Montserrat', sans-serif; position: relative;}
+  .footer-contact { background: #2b2b2b; padding: 45px 15px; text-align: center; color: #777777; font-family: 'Montserrat', monospace, sans-serif; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 20px; }
+  .footer-contact div { font-size: 18px; font-weight: bold; }
+  .footer-contact a { color: #777777; text-decoration: none; font-size: 18px; }
+  .cc0 { position: absolute; left: 10px; bottom: 115px; width: 88px; height: 31px; cursor: pointer; text-decoration: none;}
+  .cc0-mark a:link{color:FireBrick; text-decoration: none;}
+  .cc0-mark a:visited {color: FireBrick;}
+  .cc0-mark a:hover {text-decoration: underline;font-weight: bold;}
+  .cc0-image{width: 176;height: 62;}
+  
+  .comingsoon{color:#eeeeee; position:fixed;left:1%;right:1%;text-align:center;font-size:50px;font-weight:bold;top:40%;}
+
+  
+  .image-container {
+  position: relative; /* needed for absolute positioning inside */
+  overflow: hidden;   /* ensures overlay doesn't overflow */
+  }
+
+  .overlay-text {
+  position: static;
+  bottom: 0; /* appears at the bottom */
+  left: 0;
+  width: 500%;
+  background: rgba(0, 0, 0, 0.7); /* semi-transparent background */
+  color: #fff;
+  padding: 0px;
+  font-size: 14px;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  color:#ffffff;
+  text-decoration: none;
+  
+  }
+  .cc0-image:hover .overlay-text {
+  opacity: 1; /* appear on hover */
+  }
+  
+  .overlay-text:hover {
+  	color: red;
+  }
+  
+</style>
+</head>
 <body>
-
-<h1>My First Heading</h1>
-<p>My first paragraph.</p>
-
+  <header>
+    <a href="this"></a>
+    <a href="index.html">Coming Soon</a>
+    <a href="this"></a>
+  </header>
+  <main>
+    <nav>
+      <div  class="home-text" style="font-size:18px; margin-bottom:10px; color: #eee;"><a  href="index.html" style= "color: #eee; text-decoration: none">Home</a></div>
+      
+    </nav>
+    <section>
+      Coming Soon
+      <div class="comingsoon">Coming Soon</div>
+    </section>
+    
+    
+  </main>
+  
+  
+  <footer>
+    &copy; 2025 Textured. Protected by CC0 1.0
+    <div class="footer-contact">
+      <div>Email: <a href="mailto:contact@martonlauko.org">contact@martonlauko.org</a></div>
+      <div>Phone: <a href="tel:+1 (555) 123-4567">+1 (555) 123-4567</a></div>
+    </div>
+    <div class ="cc0-mark">
+    <a href="https://creativecommons.org">Textured</a> by <a href="https://creativecommons.org">Marton Lauko</a> is marked <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0 1.0</a><img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/zero.svg"
+    alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;">
+    </div>
+    
+    <a href="https://creativecommons.org/publicdomain/zero/1.0/" class="cc0" target="_blank">
+      <div class="cc0-image">
+      <div class="overlay-text">All images on this site are marked CC0 1.0. To view a copy of this mark, visit https://creativecommons.org/publicdomain/zero/1.0/</div>
+      <img src="https://mirrors.creativecommons.org/presskit/buttons/88x31/png/cc-zero.png" alt="CC0 License" width="176" height="62" >
+      
+      </div>
+    </a>
+    
+  </footer>
 </body>
 </html>
